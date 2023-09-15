@@ -123,3 +123,38 @@ console.log(arrNums.length);
 // } else {
 //   console.log("loosing");
 // }
+
+// const userNums = prompt("enter Your Number! ");
+// console.log(typeof userNums);
+
+// if (Number(userNums) === 12) {
+//   console.log("yes did it!");
+// } else {
+//   console.log("not this number");
+// }
+// if (userNums === 12) {
+//   console.log("yes did it!");
+// } else {
+//   console.log("not this number");
+// }
+// const bigInt = BigInt(Number.MAX_VALUE);
+// console.log(bigInt);
+
+// let i = 0;
+// while (i <= 10) {
+//   // console.log(i);
+//   i++;
+// }
+// const nums = [12, 34, 67, 234, 68, 55];
+// let i = 0;
+// const oddNums = [];
+// while (i < nums.length) {
+//   if (nums[i] % 2 !== 0) {
+//     console.log(nums[i]);
+//     oddNums.push(nums[i]);
+//   }
+//   i++;
+// }
+
+// console.log(nums);
+// console.log(oddNums);
