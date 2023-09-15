@@ -96,3 +96,30 @@ console.log(msgForConsideration);
 // } else {
 //   console.log("stupid guys");
 // }
+
+/*
+const arr = [];
+console.log(Boolean(arr)); //emoty array is true object
+
+const arrNums = [1, 2, 3, 4, 5];
+console.log(arrNums.indexOf(12));
+console.log(arrNums[2] + arrNums[0]);
+
+// add last elements of an array
+const newArr = arrNums.push(8);
+console.log(arrNums);
+const popFromArr = arrNums.pop();
+console.log(arrNums);
+console.log(arrNums.length);
+*/
+// const wicketRemaining = 1;
+// const oversCompleted = 50;
+// const isOpponentBattingIsOver = false;
+// if (
+//   wicketRemaining == 0 ||
+//   (oversCompleted == 50 && !isOpponentBattingIsOver)
+// ) {
+//   console.log("first innings over");
+// } else {
+//   console.log("loosing");
+// }
