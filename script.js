@@ -158,3 +158,5 @@ console.log(arrNums.length);
 
 // console.log(nums);
 // console.log(oddNums);
+
+const nums = [1, 234, 52, 341, 2];
