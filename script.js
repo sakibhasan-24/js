@@ -159,4 +159,72 @@ console.log(arrNums.length);
 // console.log(nums);
 // console.log(oddNums);
 
-const nums = [1, 234, 52, 341, 2];
+/* const nums = [1, 234, 52, 341, 2];
+const pops = (nums) => {
+  nums.length = nums.length - 1;
+};
+
+pops(nums);
+console.log(nums);
+pops(nums);
+console.log(nums);
+pops(nums);
+console.log(nums);
+pops(nums);
+console.log(nums);
+pops(nums);
+console.log(nums); */
+//function
+// 1
+// const fun = function (bane) {
+//   console.log("hello", bane);
+// };
+
+// console.log(typeof fun);
+// // 2
+// fun("hell");
+/* 
+function sayHi() {
+  console.log("this is only good morning");
+}
+
+sayHi();
+
+function sayHiUser(name) {
+  console.log(name, " good morning to you with a beautiful cup of coffe");
+}
+
+sayHiUser("sakib");
+function getUserName(name) {
+  return name;
+}
+
+var userOne = getUserName("Sakib Hasan");
+var usertwo = getUserName("Sakib Hasan");
+var users = [];
+users.push(userOne);
+users.push(usertwo);
+console.log(users);
+ */
+
+// --------------------------Objects--------------
+
+var users = {
+  fName: "sakib",
+  lName: "hasan",
+  age: 30,
+  job: "No Job",
+  nextPlan: "full time jobless",
+};
+console.log(users);
+console.log(users.fName);
+console.log(users["lName"]);
+var userAge = users["age"];
+console.log(userAge);
+console.log(Object.keys(users));
+var keysOfUser = Object.keys(users);
+for (var i = 0; i < keysOfUser.length; i++) {
+  if (keysOfUser[i].includes("a")) {
+    console.log("valid keys");
+  }
+}
