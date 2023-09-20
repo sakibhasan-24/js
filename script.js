@@ -216,15 +216,101 @@ var users = {
   job: "No Job",
   nextPlan: "full time jobless",
 };
-console.log(users);
+/* console.log(users);
 console.log(users.fName);
 console.log(users["lName"]);
 var userAge = users["age"];
 console.log(userAge);
 console.log(Object.keys(users));
-var keysOfUser = Object.keys(users);
-for (var i = 0; i < keysOfUser.length; i++) {
-  if (keysOfUser[i].includes("a")) {
-    console.log("valid keys");
-  }
-}
+var keysOfUser = Object.keys(users); */
+// for (var i = 0; i < keysOfUser.length; i++) {
+//   if (keysOfUser[i].includes("a")) {
+//     console.log("valid keys");
+//   }
+// }
+
+// console.log("using loops 1");
+// for (const i in users) {
+//   console.log(i);
+// }
+// var object = { a: 1, b: 2, c: 3 };
+// console.log(object.a);
+// console.log(object[a]);
+// console.log(object["a"]);
+
+// for (const i in object) {
+//   console.log(`${i} : ${object[i]}`);
+// }
+
+// var nums = [1, 24, 12, 344, 12];
+// for (const iterator of nums) {
+//   console.log(iterator);
+// }
+// for (const i of Object.values(object)) {
+//   console.log(i);
+// }
+
+// 12 inch =1 feet
+
+// function inchToFeet(inch) {
+//   return inch / 12;
+// }
+// const firstUser = inchToFeet(26);
+
+// console.log(Number(firstUser.toFixed(2)));
+
+// check even or odd
+
+// function isOddOrEven(num) {
+//   if (num % 2 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isOddOrEven(12));
+// console.log(isOddOrEven(21));
+// console.log(isOddOrEven(210));
+
+// function isLeapYear(year) {
+//   const comment = year % 4 === 0 ? true : false;
+//   return comment;
+// }
+
+// console.log(isLeapYear(2020));
+// console.log(isLeapYear(2016));
+// console.log(isLeapYear(1923));
+// function oddSum(arr) {
+//   let i = 0;
+//   let sum = 0;
+//   while (i < arr.length) {
+//     if (arr[i] % 2 !== 0) {
+//       sum += arr[i];
+//     }
+//     i++;
+//   }
+//   return sum % 2 !== 0 ? sum : "result is an even number " + sum;
+// }
+// console.log(oddSum([103, 1, 1, 2]));
+
+// function odd(num) {
+//   if (num % 2 != 1) {
+//     console.log("even");
+//   } else {
+//     console.log("odd");
+//   }
+// }
+// // odd(6);
+// // console.log(19 % 2);
+// for (let i = 10; i >= 1; i--) {
+//   console.log(i);
+// }
+
+// function printing(a, b, c) {
+//   return a + 2;
+//   return b + 2;
+//   return c * 5;
+// }
+
+// console.log(printing(1, 2, 3));

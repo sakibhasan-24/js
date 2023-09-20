@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      div {
+        max-width: 120rem;
+        margin: 2rem auto;
+        background-color: yellowgreen;
+        padding: 2rem 3rem;
+      }
+      h1 {
+        font-size: 10rem;
+        letter-spacing: 0.6rem;
+        font-weight: bolder;
+        transform: translateX(5%);
+      }
+
+      .one {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: one 5s;
+      }
+      .two {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: two 10s;
+      }
+      .three {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: three 12s;
+      }
+      .four {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: four 16s;
+      }
+      .five {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: five 18s;
+      }
+      .six {
+        display: inline-block;
+        transform: translateY(0rem);
+        animation: six 20s;
+      }
+      @keyframes one {
+        0% {
+          color: red;
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: red;
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #fff;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: violet;
+        }
+        100% {
+          color: salmon;
+          transform: translateY(0rem);
+        }
+      }
+      @keyframes two {
+        0% {
+          color: rgb(97, 22, 22);
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: rgb(24, 21, 21);
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #131830;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: rgb(243, 4, 4);
+        }
+        100% {
+          color: rgb(161, 123, 123);
+          transform: translateY(0rem);
+        }
+      }
+      @keyframes three {
+        0% {
+          color: rgb(97, 22, 22);
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: rgb(24, 21, 21);
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #131830;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: rgb(243, 4, 4);
+        }
+        100% {
+          color: rgb(161, 123, 123);
+          transform: translateY(0rem);
+        }
+      }
+      @keyframes four {
+        0% {
+          color: rgb(97, 22, 22);
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: rgb(24, 21, 21);
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #131830;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: rgb(243, 4, 4);
+        }
+        100% {
+          color: rgb(161, 123, 123);
+          transform: translateY(0rem);
+        }
+      }
+      @keyframes five {
+        0% {
+          color: rgb(97, 22, 22);
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: rgb(24, 21, 21);
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #131830;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: rgb(243, 4, 4);
+        }
+        100% {
+          color: rgb(161, 123, 123);
+          transform: translateY(0rem);
+        }
+      }
+      @keyframes six {
+        0% {
+          color: rgb(97, 22, 22);
+          transform: translateY(-10rem);
+        }
+        20% {
+          color: rgb(24, 21, 21);
+          transform: translateY(1.2rem);
+        }
+        40% {
+          transform: translateY(0rem);
+          color: #131830;
+        }
+        80% {
+          transform: translateY(0rem);
+          color: rgb(243, 4, 4);
+        }
+        100% {
+          color: rgb(161, 123, 123);
+          transform: translateY(0rem);
+        }
+      }
+      button {
+        background-color: rgb(78, 219, 99);
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        font-size: 1.9rem;
+        color: #16063d;
+        font-weight: bold;
+        transform: translate(20rem);
+        animation: buttonAnimation 3s infinite;
+      }
+      @keyframes buttonAnimation {
+        0% {
+          background-color: rgb(78, 219, 99);
+        }
+        25% {
+          background-color: rgb(219, 78, 78);
+        }
+        75% {
+          background-color: rgb(0, 0, 0);
+          color: #fff;
+        }
+        100% {
+          background-color: rgba(99, 78, 219, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animations">
+      <h1>
+        <span class="one">C</span><span class="two">e</span
+        ><span class="three">n</span><span class="four">t</span
+        ><span class="five">e</span><span class="six">r</span>
+      </h1>
+      <button>center Me</button>
+    </div>
+  </body>
+</html>
