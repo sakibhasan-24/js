@@ -314,3 +314,43 @@ var keysOfUser = Object.keys(users); */
 // }
 
 // console.log(printing(1, 2, 3));
+// expression produce value
+// statement complete sentences
+
+//===================String==================
+// let objSize = 0;
+// for (let i in users) {
+//   objSize++;
+// }
+// let objSize = 0;
+// for (let i in users) {
+//   console.log(i);
+//   objSize++;
+// }
+// console.log(objSize);
+// console.log(objSize);
+// function print(object) {
+//   console.log(object);
+// }
+// print(String);
+// print(Number());
+// print([]);
+// print(String);
+// print(typeof "hello");
+// print("world!");
+// const nums = new Array(12.34, 23, 123, 12);
+// console.log(nums[nums.length - 1]);
+// const courseDetails = {
+//   courseName: "data communication and netwok",
+//   courseCode: "csc 465",
+//   numberOfSection: 5,
+//   numberOfStudents: 220,
+// };
+
+// let aboutCourse = prompt("what do you want to know about course!");
+// if (Object.keys(courseDetails).includes(aboutCourse)) {
+//   console.log(courseDetails[aboutCourse]);
+// } else {
+//   aboutCourse = prompt("Not Found!what do you want to know about course!");
+//   console.log(courseDetails[aboutCourse]);
+// }
