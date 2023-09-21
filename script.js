@@ -407,37 +407,131 @@ arr[5] = 123;
 // // console.log(i);s
 // console.log(resultBox);
 
-const str = "learning js is never linear way!";
-console.log(str);
-str[0] = "L"; //immutable
-console.log(str);
-const searchText = "Js";
-if (str.toLowerCase().includes(searchText.toLowerCase())) {
-  console.log(searchText + "! exists ");
-} else {
-  console.log(searchText + "! not exists ");
-}
+// const str = "learning js is never linear way!";
+// console.log(str);
+// str[0] = "L"; //immutable
+// console.log(str);
+// const searchText = "Js";
+// if (str.toLowerCase().includes(searchText.toLowerCase())) {
+//   console.log(searchText + "! exists ");
+// } else {
+//   console.log(searchText + "! not exists ");
+// }
 
-console.log(str.indexOf("d"));
-if (str.indexOf("learning") !== -1) {
-  console.log("yes");
-} else {
-  console.log("no");
-}
+// console.log(str.indexOf("d"));
+// if (str.indexOf("learning") !== -1) {
+//   console.log("yes");
+// } else {
+//   console.log("no");
+// }
 
-console.log(str.substring(1, 4)); //ear
-console.log(str.substring(0, 3)); //lea
-console.log(str.substring(5, str.length)); //ing js is never linear way!
-console.log(str.substring(-1, 1)); //l
+//console.log(str.substring(1, 4)); //ear
+//console.log(str.substring(0, 3)); //lea
+//console.log(str.substring(5, str.length)); //ing js is never linear way!
+//console.log(str.substring(-1, 1)); //l
 // console.log(str.split(" ")[0].split("")[0] + str.split(" ")[1].split("")[0]);
-console.log(str.split(""));
-const userName = "Sakib Hasan";
-const userAcc =
-  userName.split(" ")[0].split("")[0] + userName.split(" ")[1].split("")[0];
-console.log(userAcc);
+// console.log(str.split(""));
+// const userName = "Sakib Hasan";
+// const userAcc =
+//   userName.split(" ")[0].split("")[0] + userName.split(" ")[1].split("")[0];
+// console.log(userAcc);
 
-console.log(str.slice(0, 5));
+/* console.log(str.slice(0, 5));
 console.log(str.slice(0, str.length));
 console.log(str.slice(0, 1));
 console.log(str.slice(3, str.length));
 console.log(userName.concat("!!!!"));
+ */
+
+/* console.log(Math.sqrt(16));
+console.log(Math.pow(6, 3));
+console.log(Math.abs(-6));
+console.log(Math.floor(9.1));
+console.log(Math.ceil(9.9));
+console.log(Math.round(9.4));
+console.log(+Math.PI.toFixed(4));
+
+for (let i = 1; i <= 10; i++) {
+  console.log(Math.trunc(Math.random() * 100 + 1));
+}
+ */
+// let a = 2;
+// let b = 3;
+// if (a < b) {
+//   console.log("hello");
+// }
+/* let temp;
+console.log(Math.max(val1, val2));
+// console.log(val1, val2);
+val1 = val2;
+val2 = val1;
+console.log(val1, val2);
+temp = val1;
+val1 = val2;
+val2 = temp;
+console.log(Math.round(Math.random() * 10));
+console.log(Math.abs(-78)); */
+//console.log(Array);
+
+// const nums = [32, 45, 33, 12, 67, 31, 335, 0, 76];
+// console.log(nums);
+// console.log(nums.slice(3, 6));
+// console.log(nums.splice(3));
+// console.log(nums);
+
+/* const guests = ["robert", "david", "joe", "mas", "rob"];
+const guestList = [];
+let duplicate = 0;
+let i;
+for (i = 0; i < guests.length; i++) {
+  if (guestList.indexOf(guests[i]) === -1) {
+    guestList.push(guests[i]);
+  } else {
+    duplicate++;
+    console.log("duplicates are : ", guests[i]);
+  }
+}
+if (duplicate === 0) {
+  console.log("no duplicate found");
+}
+
+console.log(duplicate);
+console.log(guestList); */
+/* function fooBar(num) {
+  if (typeof num !== "number") {
+    return "Need Valid Number!!!";
+  }
+  let count = 0;
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("foo and bar 🍾🍾");
+      count++;
+    } else if (i % 3 === 0) {
+      console.log("foooooooo  🍶");
+    } else if (i % 5 === 0) {
+      console.log("Barrrrrrr  🍻");
+    } else {
+      console.log(i);
+    }
+  }
+  console.log("Party for " + count + " times!!!");
+}
+
+fooBar(20); */
+// console.log(fooBar(1));
+/* function checkFooOrBar(num) {
+  if (typeof num !== "number") {
+    return "Need Valid Number!!!";
+  }
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "foo and bar 🍾🍾";
+  } else if (num % 3 === 0) {
+    return "foo 🍶";
+  } else if (num % 5 === 0) {
+    return "bar 🍻";
+  }
+} */
+// console.log(checkFooOrBar("nums"));
+// console.log(checkFooOrBar(15));
+// console.log(checkFooOrBar(9));
+// console.log(checkFooOrBar(20));
