@@ -340,12 +340,26 @@ var keysOfUser = Object.keys(users); */
 // print("world!");
 // const nums = new Array(12.34, 23, 123, 12);
 // console.log(nums[nums.length - 1]);
-// const courseDetails = {
-//   courseName: "data communication and netwok",
-//   courseCode: "csc 465",
-//   numberOfSection: 5,
-//   numberOfStudents: 220,
-// };
+/* const courseDetails = {
+  courseName: "data communication and netwok",
+  courseCode: "csc 465",
+  numberOfSection: 5,
+  numberOfStudents: 220,
+  firstTimeTaken: 200,
+  nameOfFaculty: ["MAB", "DAS", "TTB", "MAH", "MMR"],
+  findRetake: function () {
+    console.log(this);
+    this.retakeStudents = this.numberOfStudents - this.firstTimeTaken;
+    return this.retakeStudents;
+  },
+  statementAboutCourse: function () {
+    if (this.retakeStudents >= 100) {
+      console.log("find out the faculty! analysis failed students result!");
+    } else {
+      console.log("analysis students result");
+    }
+  },
+}; */
 
 // let aboutCourse = prompt("what do you want to know about course!");
 // if (Object.keys(courseDetails).includes(aboutCourse)) {
@@ -354,3 +368,76 @@ var keysOfUser = Object.keys(users); */
 //   aboutCourse = prompt("Not Found!what do you want to know about course!");
 //   console.log(courseDetails[aboutCourse]);
 // }
+//  console.log(courseDetails.findRetake());
+// courseDetails.statementAboutCourse();
+// console.log(courseDetails["nameOfFaculty"][0]);
+
+// why array is object
+/* JS is a prototype-based language, so there are only primitive types and objects. It grants flexibility but makes things more confusing at the same time */
+
+/* he array type is not an exception here. Array global class is a global object and an array literal is just an instance of the Array global class.
+In turn, a direct prototype of the array type contains all its special methods, like fill, find, etc.
+ */
+
+const arr = [1, 2, 235, 3, 2];
+// const value = 2;
+// console.log(Array.isArray(value));
+
+arr[0] = 123;
+arr[1] = 123;
+arr[2] = 123;
+arr[3] = 123;
+arr[4] = 123;
+arr[5] = 123;
+// console.log(arr);
+// const randomNumbersOne = Math.trunc(Math.random() * 12 + 1);
+// const randomNumbersTwo = Math.trunc(Math.random() * 12 + 1);
+// const result = randomNumbersOne * randomNumbersTwo;
+// console.log(randomNumbersOne, randomNumbersTwo);
+// console.log(result);
+
+// let i = Math.trunc(Math.random() * 4 + 1);
+// const resultBox = [
+//   Math.trunc(Math.random() * 4 + 1),
+//   Math.trunc(Math.random() * 2 + 1),
+// ];
+// console.log(resultBox);
+// console.log(i);
+// resultBox[i] = result;
+// // console.log(i);s
+// console.log(resultBox);
+
+const str = "learning js is never linear way!";
+console.log(str);
+str[0] = "L"; //immutable
+console.log(str);
+const searchText = "Js";
+if (str.toLowerCase().includes(searchText.toLowerCase())) {
+  console.log(searchText + "! exists ");
+} else {
+  console.log(searchText + "! not exists ");
+}
+
+console.log(str.indexOf("d"));
+if (str.indexOf("learning") !== -1) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
+console.log(str.substring(1, 4)); //ear
+console.log(str.substring(0, 3)); //lea
+console.log(str.substring(5, str.length)); //ing js is never linear way!
+console.log(str.substring(-1, 1)); //l
+// console.log(str.split(" ")[0].split("")[0] + str.split(" ")[1].split("")[0]);
+console.log(str.split(""));
+const userName = "Sakib Hasan";
+const userAcc =
+  userName.split(" ")[0].split("")[0] + userName.split(" ")[1].split("")[0];
+console.log(userAcc);
+
+console.log(str.slice(0, 5));
+console.log(str.slice(0, str.length));
+console.log(str.slice(0, 1));
+console.log(str.slice(3, str.length));
+console.log(userName.concat("!!!!"));
