@@ -556,6 +556,9 @@ fooBar(20); */
 // console.log(sum);
 
 const candidate = {
+  position: {
+    job: "junior software Engineer",
+  },
   candidateName: {
     fName: "Sakib",
     lName: "Hasan",
@@ -658,9 +661,60 @@ const addSkills = [
   "advance data base",
 ];
 //not change all array
-console.log(candidate.industrySkills);
-console.log(addSkills);
+// console.log(candidate.industrySkills);
+// console.log(addSkills);
 // add two array
 
 const allLevelSkills = [...addSkills, ...candidate.accedemicSkills];
-console.log(allLevelSkills);
+// console.log(allLevelSkills);
+// add spread operator for adding sum
+
+// function addNums(...nums) {
+//   console.log(nums);
+//   let res = 0;
+//   for (let i in nums) {
+//     res += nums[i];
+//   }
+//   console.log(res);
+// }
+// addNums(1, 45, 65, 98);
+// function addArray(nums) {
+//   let res = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     res += nums[i];
+//   }
+//   console.log(res);
+// }
+
+// addArray([1, 34]);
+// -------------add object property on an objects---------
+
+// const newCandidateValue = { id: 1234, ...candidate };
+// const storeDocument = { ...candidate };
+// storeDocument.candidateName.fName = "Mr.Sakib";
+// console.log(storeDocument.candidateName.fName);
+// console.log(candidate.candidateName.fName);
+// console.log(candidate);
+// console.log(candidate);
+// console.log(newCandidateValue);
+// console.log(candidate);
+// console.log(newCandidateValue);
+// console.log(
+//   newCandidateValue.candidateName.fName === candidate.candidateName.fName
+// );
+// console.log(newCandidateValue);
+// newCandidateValue.candidateName.fName = "Mr.Sakib";
+// console.log(newCandidateValue.candidateName.fName);
+// console.log(candidate.candidateName.fName);
+// console.log(candidate);
+// console.log(candidate.candidateName);
+// const storeCandidateDocument = { ...candidate };
+// console.log(storeCandidateDocument.candidateName);
+// // storeCandidateDocument.candidateName = { fName: "Mr.sakib", lName: "Hasan." };
+// storeCandidateDocument.candidateName.fName = "NN";
+// console.log(storeCandidateDocument);
+// console.log(candidate);
+const demoCandidate = { ...candidate };
+console.log(demoCandidate.position);
+demoCandidate.position = "software engineer";
+console.log(candidate.position);
