@@ -535,3 +535,117 @@ fooBar(20); */
 // console.log(checkFooOrBar(15));
 // console.log(checkFooOrBar(9));
 // console.log(checkFooOrBar(20));
+// const products = {
+//   quantity: 2,
+//   pName: "case",
+//   colors: "red",
+//   price: 12000,
+// };
+// const productOne = Object.entries(products);
+// // console.log(productOne);
+// for ([key, value] of productOne) {
+//   console.log(key + ": " + value);
+// }
+// for (let key in products) {
+//   console.log(Object.entries(key));
+// }
+// let sum = 0;
+// for (let i = 0; i <= 3; i++) {
+//   sum = sum + i;
+// }
+// console.log(sum);
+
+const candidate = {
+  candidateName: {
+    fName: "Sakib",
+    lName: "Hasan",
+  },
+  education: {
+    ssc: 2016,
+    hsc: 2018,
+    graduation: "BCSE,IUBAT,DHAKA ,BANGLADESH",
+  },
+  industrySkills: [
+    "html5",
+    "css3",
+    "bootstrap",
+    "tailwind css",
+    "JAVASCRIPT",
+    "react.js",
+    "firebase",
+    "react-router",
+    "Node.js",
+    "mongoDb",
+    "express js",
+    "and many more.....",
+  ],
+
+  accedemicSkills: [
+    "System analysis and design",
+    "Software engineering",
+    "data structure and algorithm",
+    "c++",
+    "java",
+    "object oriented",
+    "Database managements",
+    "c# and asp.net",
+    "data communication and networking",
+  ],
+  hobbies: [
+    "watching sports",
+    "love to analysis sports",
+    "interedted in global activities",
+    "foodie",
+  ],
+  skills: ["industrySkills", "accademicKkills"],
+  chooseQuestionsType: function (firstmajor, secondMajor) {
+    return `we will ask questions from ${this.industrySkills[firstmajor]} and ${this.industrySkills[secondMajor]}`;
+  },
+  addContactInfo: function ({
+    fullName,
+    phoneNo,
+    email,
+    githubLink = "not given",
+    address = "not clear at all",
+    jobExperience,
+    firstmajor = Math.trunc(Math.random() * 11),
+    secondMajor = Math.trunc(Math.random() * 11) === firstmajor
+      ? firstmajor + 1
+      : 5,
+  }) {
+    //if send parameter as a single variable possibility for confusion serial,so object is best options
+    console.log("------information------");
+    const information = `name :${fullName}\n,address:${address}\n ,email:${email}\n ,phone number :${phoneNo} \n github link :${githubLink} apply for software engineering positions , he has ${
+      jobExperience === 0 ? "no experience " : "no experience"
+    } \nwe will ask questions from ${this.industrySkills[firstmajor]} and ${
+      this.industrySkills[secondMajor]
+    }`;
+    console.log(information);
+  },
+};
+
+// objects playing...............
+const { education, contactInfo = "not Found!!" } = candidate;
+console.log(education, contactInfo);
+const { fName: candidateFirstName } = candidate.candidateName;
+console.log(candidateFirstName);
+candidate.addContactInfo({
+  fullName: "Sakib Hasan",
+  phoneNo: "019665XXXXXXX",
+  email: "sakibhasan7724@gmail.com",
+  githubLink: "sakibhasan-24.io",
+  address: "somewhere in DHAKA CITY",
+  jobExperience: 0,
+});
+// console.log(candidate);
+
+// // destructuring.......
+// const [firstHobbies] = candidate.hobbies;
+// const [firstSkills] = candidate.industrySKils;
+// console.log(firstHobbies, firstSkills);
+// let [firstSkills, secondSkills] = candidate.skills;
+
+// console.log(firstSkills, secondSkills);
+// [secondSkills, firstSkills] = candidate.skills;
+// console.log(firstSkills, secondSkills);
+// console.log(candidate.chooseQuestionsType(6, 9));
