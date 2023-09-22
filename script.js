@@ -614,22 +614,22 @@ const candidate = {
       : Math.trunc(Math.random() * (5 - 0) + 0),
   }) {
     //if send parameter as a single variable possibility for confusion serial,so object is best options
-    console.log("------information------");
-    console.log(firstmajor, secondMajor);
+    // console.log("------information------");
+    // console.log(firstmajor, secondMajor);
     const information = `name :${fullName}\n,address:${address}\n ,email:${email}\n ,phone number :${phoneNo} \n github link :${githubLink} apply for software engineering positions , he has ${
       jobExperience === 0 ? "no experience " : "no experience"
     } \nwe will ask questions from ${this.industrySkills[firstmajor]} and ${
       this.industrySkills[secondMajor]
     }`;
-    console.log(information);
+    // console.log(information);
   },
 };
 
 // objects playing...............
 const { education, contactInfo = "not Found!!" } = candidate;
-console.log(education, contactInfo);
+// console.log(education, contactInfo);
 const { fName: candidateFirstName } = candidate.candidateName;
-console.log(candidateFirstName);
+// console.log(candidateFirstName);
 candidate.addContactInfo({
   fullName: "Sakib Hasan",
   phoneNo: "019665XXXXXXX",
@@ -639,7 +639,6 @@ candidate.addContactInfo({
   jobExperience: 0,
 });
 // console.log(candidate);
-
 // // destructuring.......
 // const [firstHobbies] = candidate.hobbies;
 // const [firstSkills] = candidate.industrySKils;
@@ -650,3 +649,18 @@ candidate.addContactInfo({
 // [secondSkills, firstSkills] = candidate.skills;
 // console.log(firstSkills, secondSkills);
 // console.log(candidate.chooseQuestionsType(6, 9));
+// add new skills
+
+const addSkills = [
+  ...candidate.industrySkills,
+  "next.js",
+  "sass",
+  "advance data base",
+];
+//not change all array
+console.log(candidate.industrySkills);
+console.log(addSkills);
+// add two array
+
+const allLevelSkills = [...addSkills, ...candidate.accedemicSkills];
+console.log(allLevelSkills);
