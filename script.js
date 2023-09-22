@@ -609,12 +609,13 @@ const candidate = {
     address = "not clear at all",
     jobExperience,
     firstmajor = Math.trunc(Math.random() * 11),
-    secondMajor = Math.trunc(Math.random() * 11) === firstmajor
-      ? firstmajor + 1
-      : 5,
+    secondMajor = firstmajor >= 0 && firstmajor <= 5
+      ? Math.trunc(Math.random() * (10 - 6) + 6)
+      : Math.trunc(Math.random() * (5 - 0) + 0),
   }) {
     //if send parameter as a single variable possibility for confusion serial,so object is best options
     console.log("------information------");
+    console.log(firstmajor, secondMajor);
     const information = `name :${fullName}\n,address:${address}\n ,email:${email}\n ,phone number :${phoneNo} \n github link :${githubLink} apply for software engineering positions , he has ${
       jobExperience === 0 ? "no experience " : "no experience"
     } \nwe will ask questions from ${this.industrySkills[firstmajor]} and ${
