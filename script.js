@@ -714,7 +714,52 @@ const allLevelSkills = [...addSkills, ...candidate.accedemicSkills];
 // storeCandidateDocument.candidateName.fName = "NN";
 // console.log(storeCandidateDocument);
 // console.log(candidate);
-const demoCandidate = { ...candidate };
-console.log(demoCandidate.position);
-demoCandidate.position = "software engineer";
-console.log(candidate.position);
+// const demoCandidate = { ...candidate };
+// // console.log(demoCandidate.position);
+// demoCandidate.position.job = "software engineer";
+// console.log(demoCandidate.position.job);
+// console.log(candidate.position.job);
+
+// const numsObj = {
+//   even: {
+//     x: 0,
+//     y: 2,
+//     z: 4,
+//   },
+//   a: 3,
+//   b: 8,
+//   c: 13,
+//   d: 17,
+// };
+
+// const demo = { ...numsObj };
+// console.log(demo.even);
+// demo.even.x = 1000;
+// console.log(demo.even);
+// console.log(numsObj.even);
+// console.log(100 / 0);
+// const a = null;
+// if (!a) {
+//   console.log("hello");
+// } else {
+//   console.log("world");
+// }
+// console.log(15 == "15");
+// function com(a, b) {
+//   if (a.toString() === b) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log("123" + 123);
+// let a = "hi";
+// let b = "there";
+// console.log(a + b);
+
+// or operator return first truthy value
+// AND operator return first falsy value
+
+/* const jobExperience = 0;
+const jobStatement = jobExperience ?? 10; //?? its make 0 and "" string as a truthy value
+console.log(jobStatement); */
