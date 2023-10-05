@@ -787,13 +787,66 @@ const userObj = new String("sakib");
 // console.log(provideShortName("hello World"));
 
 // function provideShortName(userName) {
-//   if (userName.includes(",") || userName.includes("!")) {
-//     userName = userName.replace(" ");
-//   }
-//   console.log(userName);
 //   // console.log(userName);
-//   // const shortName = userName.split(" ");
-
-//   // const targetName = shortName[0].split("")[0] + shortName[1].split("")[0];
-//   // return targetName;
+//   const shortName = userName.split(" ");
+//   const targetName = shortName[0].split("")[0] + shortName[1].split("")[0];
+//   return targetName;
 // }
+
+// const now = new Date();
+// console.log(now.getMinutes());
+
+// more about function default parameter
+
+const markSheets = [];
+function studentMarks(stuName = "No Name", ID = 0, marks = 0.0, grade = "I") {
+  // funniest solution
+  // if (
+  //   stuName === undefined ||
+  //   ID === undefined ||
+  //   marks === undefined ||
+  //   grade === undefined
+  // ) {
+  //   return alert("No value");
+  // }
+  // more smart solution
+  // stuName = stuName || "not found";
+  // ID = ID || 0;
+  // marks = marks || 0;
+  // grade = grade || "I";
+
+  // but best default parameter
+
+  const result = {
+    stuName: stuName,
+    ID: ID,
+    marks: marks,
+    grade: grade,
+  };
+
+  markSheets.push(result);
+  console.log(result);
+}
+// studentMarks();
+// studentMarks("sakib", 20103218, 75, "C");
+// studentMarks();
+
+// const courseName = "CSC465";
+// const student = {
+//   ID: 3218,
+//   isPassed: false,
+// };
+// function permitForNext(courseName, student) {
+//   courseName = "fundamental";
+//   student.ID = 20103218;
+//   if (student.isPassed) {
+//     alert("yes!! go for Next");
+//   } else {
+//     alert("first do it");
+//   }
+//   console.log(student);
+//   console.log(courseName);
+// }
+
+// permitForNext(courseName, student);
+// console.log(courseName, student);
