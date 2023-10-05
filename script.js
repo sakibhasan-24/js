@@ -597,7 +597,7 @@ const candidate = {
   hobbies: [
     "watching sports",
     "love to analysis sports",
-    "interedted in global activities",
+    "interested in global activities",
     "foodie",
   ],
   skills: ["industrySkills", "accademicKkills"],
@@ -763,3 +763,37 @@ const allLevelSkills = [...addSkills, ...candidate.accedemicSkills];
 /* const jobExperience = 0;
 const jobStatement = jobExperience ?? 10; //?? its make 0 and "" string as a truthy value
 console.log(jobStatement); */
+
+// -------all about string----------------
+
+// why STring is Object
+
+const userObj = new String("sakib");
+// console.log(userObj);
+
+// function strCons() {
+//   return "as";
+// }
+
+// const on = new strCons();
+// console.log(on);
+// const userAcc = "Sakib Hasan";
+// const shortName = userAcc.split(" ");
+// console.log(shortName);
+// const targetName = shortName[0].split("")[0] + shortName[1].split("")[0];
+// console.log(targetName);
+
+// console.log(provideShortName("sakib hasan"));
+// console.log(provideShortName("hello World"));
+
+// function provideShortName(userName) {
+//   if (userName.includes(",") || userName.includes("!")) {
+//     userName = userName.replace(" ");
+//   }
+//   console.log(userName);
+//   // console.log(userName);
+//   // const shortName = userName.split(" ");
+
+//   // const targetName = shortName[0].split("")[0] + shortName[1].split("")[0];
+//   // return targetName;
+// }
