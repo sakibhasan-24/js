@@ -850,3 +850,67 @@ function studentMarks(stuName = "No Name", ID = 0, marks = 0.0, grade = "I") {
 
 // permitForNext(courseName, student);
 // console.log(courseName, student);
+console.log(
+  "A higher Order function received another function as an argument,can return a fucntion"
+);
+
+// with out higher order function
+
+function double(val) {
+  return val * 2;
+}
+
+function triple(val) {
+  return val * 3;
+}
+
+// double(4);
+// triple(4);
+
+// with higherOrder function
+
+function calculation(val, fn) {
+  const result = fn(val);
+  // console.log(`function name : ${fn.name} ${result}`);
+}
+calculation(4, double);
+calculation(4, triple);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function giveEven(nums) {
+//   const res = [];
+//   for (const i of nums) {
+//     if (i % 2 === 0) {
+//       res.push(i);
+//     }
+//   }
+//   return res;
+// }
+// function giveDouble(nums) {
+//   const res = giveEven(nums);
+//   const newNums = [];
+//   for (const i of res) {
+//     newNums.push(i * 2);
+//   }
+//   return newNums;
+// }
+// function getEvenAndDouble(nums, fn) {
+//   console.log(`${fn(nums)}`);
+// }
+// getEvenAndDouble(numbers, giveDouble);
+// getEvenAndDouble(numbers, giveEven);
+
+// function returning a function
+/* function add(number) {
+  return function (value) {
+    console.log(number + value);
+  };
+}
+
+// single line
+add(4)(2);
+add(200)(300);
+// double step
+const res = add(10);
+res(20); */
