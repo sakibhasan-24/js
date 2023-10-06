@@ -914,3 +914,10 @@ add(200)(300);
 // double step
 const res = add(10);
 res(20); */
+// function outerFunction() {
+//   let down = 1;
+//   return function () {
+//     console.log(down);
+//   };
+// }
+// const fn = outerFunction();
