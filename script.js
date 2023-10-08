@@ -1004,5 +1004,42 @@ console.log(doubleNumbers); */
 
 console.log("Object.classes");
 
-class Person {}
-console.log(Person);
+// 1)class Course {
+//   courseName;
+//   courseCode;
+//   courseFaculty = [];
+// }
+// const networdCourse = new Course();
+// networdCourse.courseName = "Data Communication ";
+// networdCourse.courseCode = "CSC465";
+// networdCourse.courseFaculty = ["a", "b"];
+// console.log(networdCourse);
+
+//2)
+
+class Course {
+  constructor(courseName, courseCode, courseFaculty) {
+    this.courseName = courseName;
+    this.courseCode = courseCode;
+    this.courseFaculty = courseFaculty;
+  }
+  numbersOfFaculty(faculty) {
+    return `${faculty.length} faculty offers ${this.CourseName} course`;
+  }
+}
+
+Course.prototype.offerPerYear;
+
+const courseOne = new Course("DATA", "CSC", ["a", "b", "c"]);
+console.log((courseOne.offerPerYear = 12));
+console.log(courseOne.numbersOfFaculty(["a", "b", "c"]));
+class CourseTwo extends Course {
+  constructor(courseName, courseCode, courseFaculty, isPrerequisite) {
+    super(courseName, courseCode, courseFaculty);
+    this.isPrerequisite = isPrerequisite;
+  }
+}
+
+const courseTwo = new CourseTwo("DATA", "CSC", ["a", "b", "c"], true);
+console.log(courseTwo);
+console.log((courseTwo.offerPerYear = 1));
