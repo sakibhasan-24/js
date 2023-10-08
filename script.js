@@ -850,9 +850,9 @@ function studentMarks(stuName = "No Name", ID = 0, marks = 0.0, grade = "I") {
 
 // permitForNext(courseName, student);
 // console.log(courseName, student);
-console.log(
+/* console.log(
   "A higher Order function received another function as an argument,can return a fucntion"
-);
+); */
 
 // with out higher order function
 
@@ -920,4 +920,74 @@ res(20); */
 //     console.log(down);
 //   };
 // }
-// const fn = outerFunction();
+//const fn = outerFunction();
+
+/* function crossBriddge() {
+  let numberOfCars = 0;
+  return function () {
+    return numberOfCars++;
+  };
+}
+const nums = crossBriddge();
+console.log(nums());
+console.log(nums());
+console.log(nums());
+console.log(nums());
+ */
+
+const userList = ["sakib", "tom", "Kane", "joe"];
+// userList.map((user) => console.log(user[0]));
+
+// one way
+const numberList = [1, 2, 3, 4, 5];
+/* const doubleNumbers = [];
+numberList.map((num) => doubleNumbers.push(num * 2));
+console.log(doubleNumbers); */
+
+// second way
+const doubleIt = numberList.map((num) => num * 2);
+// console.log(doubleIt);
+
+function groupPeopleByAge(people) {
+  const grouped = {};
+  for (const person of people) {
+    const { age, name } = person;
+
+    if (grouped[age]) {
+      console.log(grouped);
+      grouped[age].push({ name, age });
+    } else {
+      console.log(grouped);
+      grouped[age] = [{ name, age }];
+    }
+  }
+  return grouped;
+}
+// output
+/* 
+{
+  25: [
+    { name: 'Alice', age: 25 },
+    { name: 'Carol', age: 25 }
+  ],
+  30: [
+    { name: 'Bob', age: 30 },
+    { name: 'David', age: 30 }
+  ],
+  35: [
+    { name: 'Eve', age: 35 }
+  ]
+}
+
+
+*/
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Carol", age: 25 },
+  { name: "David", age: 30 },
+  { name: "Eve", age: 35 },
+];
+
+const groupedByAge = groupPeopleByAge(people);
+console.log(groupedByAge); // Expected output: The object with grouped people
