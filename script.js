@@ -939,30 +939,30 @@ const userList = ["sakib", "tom", "Kane", "joe"];
 // userList.map((user) => console.log(user[0]));
 
 // one way
-const numberList = [1, 2, 3, 4, 5];
+// const numberList = [1, 2, 3, 4, 5];
 /* const doubleNumbers = [];
 numberList.map((num) => doubleNumbers.push(num * 2));
 console.log(doubleNumbers); */
 
 // second way
-const doubleIt = numberList.map((num) => num * 2);
+// const doubleIt = numberList.map((num) => num * 2);
 // console.log(doubleIt);
 
-function groupPeopleByAge(people) {
-  const grouped = {};
-  for (const person of people) {
-    const { age, name } = person;
+// function groupPeopleByAge(people) {
+//   const grouped = {};
+//   for (const person of people) {
+//     const { age, name } = person;
 
-    if (grouped[age]) {
-      console.log(grouped);
-      grouped[age].push({ name, age });
-    } else {
-      console.log(grouped);
-      grouped[age] = [{ name, age }];
-    }
-  }
-  return grouped;
-}
+//     if (grouped[age]) {
+//       console.log(grouped);
+//       grouped[age].push({ name, age });
+//     } else {
+//       console.log(grouped);
+//       grouped[age] = [{ name, age }];
+//     }
+//   }
+//   return grouped;
+// }
 // output
 /* 
 {
@@ -981,13 +981,28 @@ function groupPeopleByAge(people) {
 
 
 */
-const people = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Carol", age: 25 },
-  { name: "David", age: 30 },
-  { name: "Eve", age: 35 },
-];
+// const people = [
+//   { name: "Alice", age: 25 },
+//   { name: "Bob", age: 30 },
+//   { name: "Carol", age: 25 },
+//   { name: "David", age: 30 },
+//   { name: "Eve", age: 35 },
+// ];
 
-const groupedByAge = groupPeopleByAge(people);
-console.log(groupedByAge); // Expected output: The object with grouped people
+// const groupedByAge = groupPeopleByAge(people);
+// console.log(groupedByAge); // Expected output: The object with grouped people
+// const numberList = [1, 2, 3, 4, 5];
+// const result = numberList.forEach((num) => console.log(num * 2));
+// const remove = numberList.filter((num) => {
+//   return num % 2 == 0;
+// });
+// const findMethod = numberList.find((num) => num % 2 == 0);
+// console.log(remove);
+// console.log(findMethod);
+// const total = numberList.reduce((pre, curr) => pre + curr, 0);
+// console.log(total);
+
+console.log("Object.classes");
+
+class Person {}
+console.log(Person);
