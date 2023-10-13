@@ -1002,7 +1002,7 @@ console.log(doubleNumbers); */
 // const total = numberList.reduce((pre, curr) => pre + curr, 0);
 // console.log(total);
 
-console.log("Object.classes");
+// console.log("Object.classes");
 
 // 1)class Course {
 //   courseName;
@@ -1017,29 +1017,97 @@ console.log("Object.classes");
 
 //2)
 
-class Course {
-  constructor(courseName, courseCode, courseFaculty) {
-    this.courseName = courseName;
-    this.courseCode = courseCode;
-    this.courseFaculty = courseFaculty;
-  }
-  numbersOfFaculty(faculty) {
-    return `${faculty.length} faculty offers ${this.CourseName} course`;
-  }
+// class Course {
+//   constructor(courseName, courseCode, courseFaculty) {
+//     this.courseName = courseName;
+//     this.courseCode = courseCode;
+//     this.courseFaculty = courseFaculty;
+//   }
+//   numbersOfFaculty(faculty) {
+//     return `${faculty.length} faculty offers ${this.CourseName} course`;
+//   }
+// }
+
+// Course.prototype.offerPerYear;
+
+// const courseOne = new Course("DATA", "CSC", ["a", "b", "c"]);
+// console.log((courseOne.offerPerYear = 12));
+// console.log(courseOne.numbersOfFaculty(["a", "b", "c"]));
+// class CourseTwo extends Course {
+//   constructor(courseName, courseCode, courseFaculty, isPrerequisite) {
+//     super(courseName, courseCode, courseFaculty);
+//     this.isPrerequisite = isPrerequisite;
+//   }
+// }
+
+// const courseTwo = new CourseTwo("DATA", "CSC", ["a", "b", "c"], true);
+// console.log(courseTwo);
+// console.log((courseTwo.offerPerYear = 1));
+
+/* const cube = (x) => x * x * x;
+console.log(cube(2));
+const nums = [1, 2, 3, 4, 5];
+const [a, b] = nums;
+console.log(a + b);
+const { x, y, z } = { x: 1, y1: 2, z: 3 };
+console.log(y);
+let out = nums.filter((n) => n % 2);
+console.log(out);
+console.log(4 % 2);
+ */
+
+// let p = "J";
+// let q = p; //j
+// p = "R";
+// console.log(q);
+
+// const isTrue = true;
+// // console.log(!isTrue);
+// console.log(!isTrue ? "Hello" : "World");
+// const sum = (p, q) => {
+//   p + q;
+// };
+
+// console.log(sum(2, 3));
+// function work(x, y = 4) {
+//   return x + y;
+// }
+// console.log(work(32));
+
+// console.log(1);
+// console.log(2);
+// setTimeout(() => {
+//   console.log(3);
+// }, 1000);
+// console.log(5);
+// const getData = new Promise((resolve, reject) => {
+//   // resolve(123);
+//   reject("no data");
+// });
+// getData.then((res) => console.log(res)).catch((err) => console.log(err));
+
+async function f() {
+  let res = "first";
+  console.log(res);
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("done");
+    }, 1000);
+  });
+  res = await promise;
+  console.log(res);
 }
+f();
 
-Course.prototype.offerPerYear;
-
-const courseOne = new Course("DATA", "CSC", ["a", "b", "c"]);
-console.log((courseOne.offerPerYear = 12));
-console.log(courseOne.numbersOfFaculty(["a", "b", "c"]));
-class CourseTwo extends Course {
-  constructor(courseName, courseCode, courseFaculty, isPrerequisite) {
-    super(courseName, courseCode, courseFaculty);
-    this.isPrerequisite = isPrerequisite;
-  }
+function g() {
+  let res = "first";
+  console.log(res);
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("done");
+    }, 1000);
+  });
+  res = promise;
+  console.log(res);
 }
-
-const courseTwo = new CourseTwo("DATA", "CSC", ["a", "b", "c"], true);
-console.log(courseTwo);
-console.log((courseTwo.offerPerYear = 1));
+f();
