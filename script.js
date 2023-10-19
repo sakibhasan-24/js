@@ -1086,7 +1086,7 @@ console.log(4 % 2);
 // });
 // getData.then((res) => console.log(res)).catch((err) => console.log(err));
 
-async function f() {
+/* async function f() {
   let res = "first";
   console.log(res);
   let promise = new Promise((resolve, reject) => {
@@ -1109,5 +1109,85 @@ function g() {
   });
   res = promise;
   console.log(res);
+} */
+// f();
+
+// what you need for react
+// 1(how to declare a variable let const var)
+const yourName = "sakib";
+
+let yourAge = 12;
+var youOutOfControl = 9999;
+
+// 2(conditional)
+
+//3) array,index,push,pop,
+const yourMarks = [12, 45, 90, 88, 9];
+
+// 4)loop(for loop,for in loop,for of loop,while)
+// 5(function)
+// 6(OBJECT)
+//
+const user = {
+  position: {
+    job: "junior software Engineer",
+  },
+  candidateName: {
+    fName: "Sakib",
+    lName: "Hasan",
+  },
+  education: {
+    ssc: 2016,
+    hsc: 2018,
+    graduation: "BCSE,IUBAT,DHAKA ,BANGLADESH",
+  },
+  passingYear: 2025,
+};
+
+// arrow function
+const multiply = (nums) => nums * 3;
+// console.log(multiply(3));
+const userName = `${user.candidateName.fName} is not eligible`;
+// console.log(userName);
+// const arrNums = [
+//   Math.trunc(Math.random() * 10 + 1),
+//   Math.trunc(Math.random() * 16 + 5),
+//   Math.trunc(Math.random() * 100 + 5),
+// ];
+// console.log(Math.trunc(Math.random() * 5));
+// console.log(Math.trunc(Math.random() * (10 - 5) + 5));
+const numberArray = [12, 2, 123, 1, 19, 100];
+// map
+
+const newArray = numberArray.map((num) => num * 2);
+// console.log(newArray);
+// foreach
+// doesnot return anything
+/* const forEachNew = numberArray.forEach((num) => num * 5);
+console.log(forEachNew); */
+// numberArray.forEach((num) => console.log(num * 5));
+// filter
+// return only number grater than 10
+const newArrFilter = numberArray.filter((num) => num > 10);
+// console.log(newArrFilter);
+// find
+// only first match return value
+const findNum = numberArray.find((num) => num > 10);
+// console.log(findNum);
+// reduce
+
+// traditional method
+let sum = 0;
+for (let i = 0; i < numberArray.length; i++) {
+  sum += numberArray[i];
 }
-f();
+// console.log(sum);
+
+// very simple prev value,current value and an initial value
+const reduceMethod = numberArray.reduce((prev, current) => prev + current, 0);
+const reduceMethods = numberArray.reduce(
+  (prev, current) => prev + current,
+  -257
+);
+// console.log(reduceMethod);
+// console.log(reduceMethods);
