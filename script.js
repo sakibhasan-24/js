@@ -1191,3 +1191,18 @@ const reduceMethods = numberArray.reduce(
 );
 // console.log(reduceMethod);
 // console.log(reduceMethods);
+
+// // destructuring
+// console.log(JSON.stringify(user));
+// console.log(JSON.parse(JSON.stringify(user)));
+// let's play with random numbers
+
+// console.log(Math.random()); //return 0 to 0.99
+// console.log(Math.trunc(Math.random() * 5)); //0 to 5
+// console.log(Math.trunc(Math.random() * (15 - 10) + 10)); //10 to 15
+// console.log(Math.trunc(Math.random() * (1000 - 998)) + 998); //998 to 1000
+// console.log(Math.trunc(Math.random() * 2) + 998); //998 to 1000
+// console.log(Math.trunc(Math.random() * 2) + 998);
+
+// const { position, education: edu, experience = 12, ...allInfo } = user;
+// console.log(experience);
