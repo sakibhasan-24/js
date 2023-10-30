@@ -1206,3 +1206,29 @@ const reduceMethods = numberArray.reduce(
 
 // const { position, education: edu, experience = 12, ...allInfo } = user;
 // console.log(experience);
+
+// data structure
+const mapData = new Map();
+// console.log(mapData.size);
+mapData.set("userName", "sakib hasan");
+mapData.set("skills", ["HTML", "CSS", "JS", "REACT"]);
+// console.log(mapData.get("skills"));
+// mapData.forEach((value, key) => console.log(value, key));
+const products = new Map();
+products.set("chips", 12);
+products.set("choclate", 2);
+products.set("drinks", 1);
+products.set("tea", 4);
+products.set("coffe", 5);
+
+// products.delete("coffe");
+// for (let [productName, productQuantity] of products) {
+//   if (products.has("choclsate")) {
+//     console.log("found");
+//     break;
+//   } else {
+//     console.log("no");
+//     break;
+//   }
+// }
+// console.log(products);
