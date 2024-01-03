@@ -1306,4 +1306,20 @@ class BankAccount {
 
 const one = new BankAccount(123456789, "sakib", 100);
 one.withdraw(80);
-console.log(one);
+// console.log(one);
+class SpecialCustomer extends BankAccount {
+  constructor(accountNumber, accountHolderName, balance = 0, takeLoan) {
+    super(accountNumber, accountHolderName, balance);
+
+    this.takeLoan = takeLoan;
+  }
+  calculateTotalAmountAndLoan() {
+    const totalBalance = this.balance + this.takeLoan;
+    const totalLoan = this.takeLoan;
+    console.log(
+      `your total balance is ${totalBalance} and totalLoan is ${totalLoan}`
+    );
+  }
+}
+const spe = new SpecialCustomer(123456789, "sakib", 100, 50);
+// spe.calculateTotalAmountAndLoan();
