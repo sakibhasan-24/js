@@ -1232,3 +1232,78 @@ products.set("coffe", 5);
 //   }
 // }
 // console.log(products);
+
+// each box(node) has  two things one is initial value other one is reference(it means which value is next)
+
+const room = { numOfTable: 1, numOfChair: 1, roomStatus: "master bed" };
+
+/* console.log(room["numOfTable"]);
+console.log(room.numOfChair);
+console.log(room.status); */
+
+// what will be the output and why
+// keys are always stringified
+/* const obj = { a: 1, b: 4, true: true };
+console.log(obj);
+obj["true"] = "hello....";
+console.log(obj["true"]);
+console.log(obj[true]);
+console.log(obj);
+ */
+
+// ----------------OOP ---------------------
+// ---------------CLASS-----------------
+class Operation {
+  // lets add constructor
+  constructor(a, b) {
+    if (!Number.isFinite(a) || a <= 0) {
+      throw new Error("a must be a positive number");
+    }
+    if (!Number.isFinite(b) || b <= 0) {
+      throw new Error("b must be a positive number");
+    }
+    this.a = a;
+    this.b = b;
+  }
+  performAdd() {
+    return this.a + this.b;
+  }
+  performMultiply() {
+    return this.a * this.b;
+  }
+}
+
+// const first = new Operation();
+// console.log(first)
+// first.num1 = 2;
+// first.num2 = 1;
+// console.log(first.performAdd());
+
+class BankAccount {
+  constructor(accountNumber, accountHolderName, balance = 0) {
+    if (typeof balance !== "number") {
+      console.log("balance must be a positive number");
+    }
+    this.accountNumber = accountNumber;
+    this.accountHolderName = accountHolderName;
+    this.balance = balance;
+  }
+  deposit(amount) {
+    if (amount < 0 || typeof amount !== "number") {
+      console.log("amount must be a positive number");
+      return;
+    }
+    return (this.balance += amount);
+  }
+  withdraw(amount) {
+    if (amount < 0 || typeof amount !== "number" || amount > this.balance) {
+      console.log("amount must be a positive number and less than balance");
+      return;
+    }
+    return (this.balance -= amount);
+  }
+}
+
+const one = new BankAccount(123456789, "sakib", 100);
+one.withdraw(80);
+console.log(one);
