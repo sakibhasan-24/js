@@ -1323,3 +1323,154 @@ class SpecialCustomer extends BankAccount {
 }
 const spe = new SpecialCustomer(123456789, "sakib", 100, 50);
 // spe.calculateTotalAmountAndLoan();
+
+// merge array
+// [0,3,5,62],[6,9,30]
+// out put [0,3,5,6,9,30,62]
+const mergeArray = (arr1, arr2) => {
+  const newMergeArray = [];
+  let arrayOneItem = arr1[0];
+  let arrayTwoItem = arr2[0];
+  let i = 1;
+  let j = 1;
+  // while (arrayOneItem || arrayTwoItem) {
+  //   console.log(arrayOneItem, arrayTwoItem);
+  //   if (!arrayTwoItem || arrayOneItem < arrayTwoItem) {
+  //     newMergeArray.push(arrayOneItem);
+  //     arrayOneItem = arr1[i];
+  //     i++;
+  //   } else {
+  //     newMergeArray.push(arrayTwoItem);
+  //     arrayTwoItem = arr2[j];
+  //     j++;
+  //   }
+  // }
+  return newMergeArray;
+};
+
+// console.log(mergeArray([0, 3, 5, 62], [6, 9, 30, 87]));
+// first case
+//  0 > 6 if true then push 6 otherwise push 0
+
+// hash table
+
+/* 1- create a hash table class */
+/* class HashTable {
+  constructor() {
+    this.values = {};
+    this.length = 0;
+    this.size = 0;
+  }
+  // hash function
+  calculateHash(key) {
+    return key.toString().length % this.size;
+  }
+  add(key, value) {
+    const hash = this.calculateHash(key);
+    // console.log(hash);
+    if (!this.values.hasOwnProperty(hash)) {
+      this.values[hash] = {};
+    }
+    if (!this.values[hash].hasOwnProperty(key)) {
+      this.length++;
+    }
+    this.values[hash][key] = value;
+  }
+  search(key) {
+    const hash = this.calculateHash(key);
+    if (
+      this.values.hasOwnProperty(hash) &&
+      this.values[hash].hasOwnProperty(key)
+    ) {
+      return this.values[hash][key];
+    } else {
+      return null;
+    }
+  }
+} */
+
+/* const hashOne = new HashTable();
+hashOne.add("sakib", 900);
+hashOne.add("sakib hasan", 100);
+hashOne.add("sakib hasan d", 300);
+console.log(hashOne.search("sakib hasan d")); */
+
+class HashTable {
+  constructor(size) {
+    this.data = new Array(size);
+  }
+  _hash(key) {
+    let hash = 0;
+
+    for (let i = 0; i < key.length; i++) {
+      // console.log("inside", hash);
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+    }
+    return hash;
+  }
+  set(key, value) {
+    let address = this._hash(key); // where i will store my result
+    // console.log(address);
+    if (!this.data[address]) {
+      this.data[address] = [];
+
+      // console.log(this.data);
+    }
+    this.data[address].push([key, value]);
+    return this.data;
+  }
+  get(key) {
+    let address = this._hash(key);
+    const currentBucket = this.data[address];
+    // console.log(currentBucket);
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        // console.log(currentBucket[i][1]);
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
+      }
+    } else {
+      return "no items";
+    }
+  }
+}
+
+const myHashTable = new HashTable(2);
+// console.log(myHashTable.set("password", 1000));
+// myHashTable.set("userName", 1000);
+// myHashTable.set("email", 100);
+// myHashTable.set("password20", 190);
+const ans = myHashTable.get("email");
+// console.log(ans);
+const value = [12, 35, 35, 112, 34];
+
+// o(n'2)
+function findSameElements(input) {
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0 + 1; j < input.length; j++) {
+      // console.log("i", i, "j", j);
+      if (input[i] === input[j]) return input[i];
+    }
+  }
+  return null;
+}
+
+function hashTableImplement(input) {
+  let newObj = {};
+  for (let i = 0; i < input.length; i++) {
+    if (newObj[input[i]] !== undefined) {
+      console.log(newObj);
+
+      return input[i];
+    } else {
+      newObj[input[i]] = i;
+    }
+  }
+  return undefined;
+}
+
+console.log(hashTableImplement([1, 5, 1, 2, 3, 5, 1, 2, 4]));
+// console.log(String.fromCharCode(i));
+// newObj.push({ key: String.fromCharCode(i), value: input[counter] });
+// newObj[input[i]] means input[i]==1 newObj[1]
