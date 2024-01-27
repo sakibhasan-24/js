@@ -1470,7 +1470,129 @@ function hashTableImplement(input) {
   return undefined;
 }
 
-console.log(hashTableImplement([1, 5, 1, 2, 3, 5, 1, 2, 4]));
+// console.log(hashTableImplement([1, 5, 1, 2, 3, 5, 1, 2, 4]));
 // console.log(String.fromCharCode(i));
 // newObj.push({ key: String.fromCharCode(i), value: input[counter] });
 // newObj[input[i]] means input[i]==1 newObj[1]
+
+function targetIndex(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    const targetNum = target - nums[i];
+    for (let j = i + 1; j < nums.length; j++) {
+      if (targetNum === nums[j]) {
+        return [i, j];
+      }
+    }
+  }
+  return null;
+}
+// console.log(targetIndex([1, 3, 7, 9, 2], 16));/
+function targetIndexTwo(nums, target) {
+  const numsMap = {};
+  for (let i = 0; i < nums.length; i++) {
+    const currentNumMaps = numsMap[nums[i]];
+    if (currentNumMaps >= 0) {
+      return [currentNumMaps, i];
+    } else {
+      const targetNum = target - nums[i];
+      numsMap[targetNum] = i;
+    }
+  }
+  return null;
+}
+console.log(targetIndexTwo([1, 3, 7, 9, 2], 11));
+// console.log(0o22 % 20);
+
+// linked list
+
+/* 
+  "sakib" --->"depression"--->"control"
+
+*/
+
+const linkedList = {
+  head: {
+    value: "sakib",
+    next: {
+      value: "depression",
+      next: {
+        value: "control",
+        next: {
+          value: null,
+        },
+      },
+    },
+  },
+};
+// 100-200-900
+// class LinkedList {
+//   constructor(value) {
+//     this.head = {
+//       value: value,
+//       next: null,
+//     };
+//     this.tail = this.head;
+//     this.length = 1;
+//     // console.log(this.tail === null);
+//   }
+// }
+
+/* 
+
+"sakib"->"target"->"tea"
+ "sakib is  a box it has a value and next,where next indicate next(target) ,then target has value and next and next indicate tea"
+
+ but here sakib is head
+*/
+
+class LinkedList {
+  constructor(name) {
+    // this.name=name
+    // this.next=null
+    this.head = {
+      name: name,
+      next: null,
+    };
+    // update for tail
+    this.tail = this.head;
+    this.length = 1;
+  }
+  add(name) {
+    // repeat
+    const newNode = {
+      name: name,
+      next: null,
+    };
+    // update tail
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
+  addFirst(name) {
+    // repeat
+    const newNode = {
+      name: name,
+      next: null,
+    };
+    // update
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
+}
+const myLinkedList = new LinkedList("sakib");
+myLinkedList.add("target");
+myLinkedList.add("tea");
+myLinkedList.addFirst("Legend--->");
+// console.log(myLinkedList);
+
+// challenge One
+
+/* 
+
+   
+
+
+*/
