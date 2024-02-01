@@ -1500,7 +1500,10 @@ function targetIndexTwo(nums, target) {
   }
   return null;
 }
-console.log(targetIndexTwo([1, 3, 7, 9, 2], 11));
+// console.log(targetIndexTwo([1, 3, 7, 9, 2], 11));
+
+// array two
+
 // console.log(0o22 % 20);
 
 // linked list
@@ -1591,8 +1594,117 @@ myLinkedList.addFirst("Legend--->");
 // challenge One
 
 /* 
+// monokai
+   1-2-3-4-5-null
+   output:5-4-3-2-1-null
 
-   
 
 
 */
+
+// const reversedLinkedList = (head) => {
+//   console.log(head);
+//   // [1, 2, 3, 4, 5, 6]
+//   let prev = null;
+//   let current = head;
+//   while (current) {
+//     let next = current.next;
+//     current.next = prev;
+//     prev = current;
+//     current = next;
+//   }
+//   return prev;
+// };
+// console.log(reversedLinkedList([1, 2, 3, 4, 5, 6]));
+
+// const arrayReversed = (arr) => {
+//   const newArr = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     newArr.push(arr[i]);
+//   }
+//   return newArr;
+// };
+// console.log(arrayReversed([1, 2, 3, 4, 5, 6]));
+
+// basic stack and queue
+
+const arrStack = [1, 23, 45, 3];
+arrStack.push(1222);
+// console.log(arrStack);
+
+const arrQueue = [1, 2, 3, 54, 3];
+// console.log("orginal", arrQueue);
+arrQueue.shift(12);
+// console.log("shift", arrQueue);
+arrQueue.unshift(100);
+// console.log("unshift", arrQueue);
+//
+
+// binary search  tree
+
+class BinarySearch {
+  constructor() {
+    this.root = null;
+  }
+
+  // insert nums
+  insert(value) {
+    // create a new node
+    const newNode = {
+      value: value,
+      left: null,
+      right: null,
+    };
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          // go left
+          // check if left node root
+          if (!currentNode.left) {
+            console.log("currentNode", currentNode);
+            currentNode.left = newNode;
+            return this;
+          }
+          currentNode = currentNode.left;
+        } else {
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
+    }
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+  // insert
+  insert(value){
+    const newNode={
+      value:value,
+      left:null,
+      right:null
+    }
+    if(this.root===null){
+      this.root=newNode;
+    }
+    
+  }
+}
+const check = new BinarySearchTree();
+check.insert(9);
+check.insert(4);
+check.insert(6);
+// check.insert(20);
+// check.insert(170);
+// check.insert(15);
+// check.insert(1);
+
+console.log(check.root);
