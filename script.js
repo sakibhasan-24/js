@@ -1686,23 +1686,42 @@ class BinarySearchTree {
     this.root = null;
   }
   // insert
-  insert(value){
-    const newNode={
-      value:value,
-      left:null,
-      right:null
+  insert(value) {
+    const newNode = {
+      value: value,
+      left: null,
+      right: null,
+    };
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value <= currentNode.value) {
+          // left side
+          if (currentNode.left === null) {
+            currentNode.left = currentNode;
+            return this;
+          }
+          // if not null
+          currentNode = currentNode.left;
+        } else {
+          if (currentNode.right === null) {
+            currentNode.right = currentNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
     }
-    if(this.root===null){
-      this.root=newNode;
-    }
-    
   }
 }
+
 const check = new BinarySearchTree();
 check.insert(9);
 check.insert(4);
 check.insert(6);
-// check.insert(20);
+check.insert(20);
 // check.insert(170);
 // check.insert(15);
 // check.insert(1);
