@@ -51,6 +51,7 @@ class binarySearchTree {
         return currentNode.value;
       }
     }
+
     return "Nothing is found";
   }
 }
@@ -63,3 +64,26 @@ test.insert(52);
 test.insert(2);
 console.log("search", test.searching(1589));
 console.log(test);
+
+const recurSiveFactorial = (number) => {
+  if (number === 1) {
+    return 1;
+  }
+  return number * recurSiveFactorial(number - 1);
+};
+// console.log(recurSiveFactorial(5));
+
+/* 
+
+recurSiveFactorial(5) =
+5 * recurSiveFactorial(4) =
+5 * (4 * recurSiveFactorial(3)) =
+5 * (4 * (3 * recurSiveFactorial(2))) =
+5 * (4 * (3 * (2 * recurSiveFactorial(1)))) =
+5 * (4 * (3 * (2 * 1))) =
+5 * (4 * (3 * 2)) =
+5 * (4 * 6) =
+5 * 24 =
+120
+
+*/
